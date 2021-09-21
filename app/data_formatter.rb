@@ -16,8 +16,4 @@ module DataFormatter
       date
     end
   end
-
-  def format_result(data)
-    data.map { |x| x.join(', ') }.flatten
-  end
 end

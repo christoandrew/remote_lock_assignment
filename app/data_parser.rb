@@ -1,6 +1,5 @@
 require_relative 'dollar_format_parser'
 require_relative 'percent_format_parser'
-require 'pry'
 
 module DataParser
   def self.parse(params)
@@ -11,7 +10,5 @@ module DataParser
     (dollar_format_data + percent_format_data).sort_by { |x|
       x[order_by_column]
     }.map { |x| x.join(', ') }.flatten
-
-
   end
 end
